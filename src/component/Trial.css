@@ -1,0 +1,14 @@
+.ccontainer{
+    overflow-x: scroll;
+    overflow-y:hidden;
+    white-space: nowrap;
+    height: 47vh;
+    margin: 2vh 0 2vh 0; 
+}
+img{
+    width: 115%;
+}
+.ccard{
+    display: inline-block;
+    margin: 0 1rem 0 1rem;
+}

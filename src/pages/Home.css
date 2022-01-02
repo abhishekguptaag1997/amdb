@@ -1,0 +1,9 @@
+.home-content{
+    height: 45vh;
+    background-image: url("../images/main-ticket.jpg");
+    background-size: contain;
+}
+.search-text{
+   width: 70vw;
+   border-radius: 2rem 2rem;
+}
