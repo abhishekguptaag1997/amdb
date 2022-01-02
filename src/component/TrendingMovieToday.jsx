@@ -9,7 +9,7 @@ const TrendingMovieToday = () => {
     return (
         <div>
             <div className="ccontainer bg-dark ">
-                {results && results.map((movie) =><MovieCard movie={movie} />)}
+                {results && results.map((movie) =><MovieCard key={movie.id} id={movie.id} movie={movie} />)}
             </div>
         </div>
     )
