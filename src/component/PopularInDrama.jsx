@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react'
-import { useGetTrending } from '../hooks/useGetTrending'
+
 import "../component/Trial.css"
+import { useGetDiscoverCategories } from '../hooks/useGetDiscoverCategories'
 import MovieCard from './MovieCard'
 
-const TrendingMovieToday = () => {
-    const { results } = useGetTrending("movie", "day")
+const PopularInDrama= () => {
+    const { results } = useGetDiscoverCategories("18")
    
     return (
         <div>
-            <h3 className='text-center mt-5 fw-bold text-white'>Trending Movies Today</h3>
+            <h3 className='text-center mt-5 fw-bold text-white'>Popular in Drama</h3>
             <div className="ccontainer">
                 {results && results.map((movie) =><MovieCard key={movie.id} id={movie.id} movie={movie} />)}
             </div>
@@ -16,4 +17,4 @@ const TrendingMovieToday = () => {
     )
 }
 
-export default TrendingMovieToday
+export default PopularInDrama

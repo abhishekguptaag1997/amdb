@@ -1,4 +1,9 @@
 import React from 'react'
+import PopularInActionAdventure from '../component/PopularInActionAdventure'
+import PopularInAnimation from '../component/PopularInAnimation'
+import PopularInComedy from '../component/PopularInComedy'
+import PopularInDrama from '../component/PopularInDrama'
+import TrendingMovieThisWeek from '../component/TrendingMovieThisWeek'
 import TrendingMovieToday from '../component/TrendingMovieToday'
 import "./Home.css"
 
@@ -17,7 +22,22 @@ const Home = () => {
                 </div>
             </div>
             <div className='trending-today'>
-               <TrendingMovieToday />
+                <TrendingMovieToday />
+            </div>
+            <div className='trending-week'>
+                <TrendingMovieThisWeek />
+            </div>
+            <div className='popular-action-adventure'>
+               <PopularInActionAdventure />
+            </div>
+            <div className='popular-drama'>
+               <PopularInDrama />
+            </div>
+            <div className='popular-comedy'>
+               <PopularInComedy />
+            </div>
+            <div className='popular-animation'>
+               <PopularInAnimation />
             </div>
         </div>
     )
