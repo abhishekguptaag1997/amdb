@@ -1,19 +1,24 @@
 import { motion } from 'framer-motion'
 import React from 'react'
+import {useNavigate} from "react-router-dom"
 import { getMovieGenreByGenreId } from '../genres/movieGenres'
 import "./Trial.css"
 
 
 
 const MovieCard = ({id,movie}) => {
+    let navigate = useNavigate()
     const moviePosterURL = "https://image.tmdb.org/t/p/w200" + movie.poster_path
     const getMovieDate = () => {
         return movie.release_date.substring(0, 4)
     }
+    const clickHandler=()=>{
+        navigate(`/movie/${id}`)
+    }
     return (
         <>
             <motion.div className="ccard" whileHover={{ scale: 1.2 }}
-                style={{ background: `url(${moviePosterURL}) no-repeat` }}>
+                style={{ background: `url(${moviePosterURL}) no-repeat` }} onClick={clickHandler}>
                 <div className="container-fluid" style={{ paddingBottom: "0" }}>
                     <div className="row text-white">
                         <div>

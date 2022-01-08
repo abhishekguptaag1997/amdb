@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Footer from './component/Footer'
+import Movie from './component/Movie'
 import Navbar from './component/Navbar'
 import Trial from './component/Trial'
 import Home from './pages/Home'
@@ -13,7 +14,7 @@ const App = () => {
         <div style={{margin:"0 8vw"}}>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/movies" />
+            <Route path="/movie/:id" element={<Movie/>} />
           </Routes>
         </div>
         <Footer />
